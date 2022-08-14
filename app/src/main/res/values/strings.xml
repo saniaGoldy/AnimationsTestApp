@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Animations test App</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="value_animator">Value Animator</string>
+    <string name="view_property_animator">View Property Animator</string>
+    <string name="object_animator">Object Animator</string>
+    <string name="shared_view_button">shared view button</string>
+    <string name="shared_button_scene_2">shared button scene 2</string>
+    <string name="title">Title</string>
+    <string name="image">Image</string>
+</resources>
