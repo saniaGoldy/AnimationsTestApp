@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="FullWrap">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="FullWrap.AnimatedButton">
+        <item name="android:fontFamily">sans-serif-black</item>
+        <item name="android:textColor">#FFEA00</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">#3E1B80</item>
+        <item name="backgroundTint">@null</item>
+    </style>
+</resources>
