@@ -1,6 +1,5 @@
 package com.example.animationstestapp.ui.notifications
 
-import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -9,7 +8,6 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.example.animationstestapp.data.model.Person
 import com.example.animationstestapp.databinding.FragmentNotificationsBinding
-import java.io.File
 
 class NotificationsFragment : Fragment() {
 
@@ -28,8 +26,6 @@ class NotificationsFragment : Fragment() {
     ): View {
         _binding = FragmentNotificationsBinding.inflate(inflater, container, false)
 
-        setupRepo()
-
         with(binding) {
             confrimButton.setOnClickListener {
                 viewModel.saveChangesInFile(
@@ -37,13 +33,15 @@ class NotificationsFragment : Fragment() {
                 )
             }
         }
-
-        viewModel.loadData()
-
         viewModel.person.observe(viewLifecycleOwner) { person: Person ->
             updateUi(person)
         }
         return binding.root
+    }
+
+    override fun onResume() {
+        super.onResume()
+        viewModel.loadData()
     }
 
     private fun createPersonFromInsertedData(): Person {
@@ -70,19 +68,9 @@ class NotificationsFragment : Fragment() {
         }
     }
 
-    private fun setupRepo() {
-        val resDir = this@NotificationsFragment.requireContext()
-            .getDir(RES_DIR_FILE_NAME, Context.MODE_PRIVATE)
-        viewModel.setDataFile(File(resDir, PERSON_DATA_FILE_NAME))
-    }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
-    }
-
-    companion object {
-        const val RES_DIR_FILE_NAME = "PersonData"
-        const val PERSON_DATA_FILE_NAME = "person"
     }
 }
