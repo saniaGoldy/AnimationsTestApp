@@ -10,4 +10,13 @@
     <string name="shared_button_scene_2">shared button scene 2</string>
     <string name="title">Title</string>
     <string name="image">Image</string>
+    <string name="name">Name</string>
+    <string name="surname">Surname</string>
+    <string name="apply_changes">Apply Changes</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="postal_address">Postal Address</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
